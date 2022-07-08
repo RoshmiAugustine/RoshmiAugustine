@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pcis-backend-service
+spec:
+  selector:
+    app: pcis-backend-pod
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer

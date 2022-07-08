@@ -1,0 +1,26 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+WORKDIR /app
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+WORKDIR /src
+COPY ["*.sln", "./"]
+COPY ["Background/Background.csproj", "./Background/"]
+RUN dotnet restore "./Background/Background.csproj"
+COPY . .
+WORKDIR /src/Background
+RUN dotnet build "Background.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Background.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENV ASPNETCORE_ENVIRONMENT=Production
+ARG KeyVaultUrl
+ARG KeyVaultClientId
+ARG KeyVaultSecretId
+ENV KeyVault__Url=$KeyVaultUrl
+ENV KeyVault__ClientId=$KeyVaultClientId
+ENV KeyVault__SecretId=$KeyVaultSecretId
+ENTRYPOINT ["dotnet", "Background.dll"]

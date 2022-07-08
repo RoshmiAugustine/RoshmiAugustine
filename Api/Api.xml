@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Opeeka.PICS.Api.Config.SerilogConfig">
+            <summary>
+            To manage and configure serilog sinks, enrichers and loglevel.
+            </summary>
+        </member>
+        <member name="M:Opeeka.PICS.Api.Config.SerilogConfig.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configures the serilog sinks, enrichers and loglevel.
+            </summary>
+            <param name="serviceCollection">The instance of <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <param name="configuration">The configuration properties.</param>
+        </member>
+        <member name="T:Opeeka.PICS.Api.Config.SerilogLoggingLevelSwitch">
+            <summary>
+            Serilog Logging Level Switch to allow for dynamic changes to logging level at runtime.
+            </summary>
+        </member>
+        <member name="F:Opeeka.PICS.Api.Config.SerilogLoggingLevelSwitch.levelSwitch">
+            <summary>
+            LevelSwitch.
+            </summary>
+        </member>
+        <member name="M:Opeeka.PICS.Api.Config.SerilogLoggingLevelSwitch.SetLoggingLevel(System.Int32)">
+            <summary>
+            Set minimum logging level.
+            </summary>
+            <param name="eventLevel">log event level.</param>
+        </member>
+        <member name="M:Opeeka.PICS.Api.Controllers.AccountController.Login(Opeeka.PICS.Domain.DTO.UserDTO)">
+             <summary>
+             A Sample Post request.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST api/Account/Login
+                 {
+                   "UserName": "Mike",
+                   "Password": "xxxx"
+                 }
+             </remarks>
+             <param name="user">user object</param>
+             <returns>Response.</returns>
+             <response code="200">If valid user.</response>
+             <response code="404">If invalid user.</response>
+        </member>
+        <member name="M:Opeeka.PICS.Api.Controllers.BaseController.HandleException(System.Exception,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Generic method to handle exceptions for HttpResponseMessage.
+            </summary>
+            <param name="exp">Exception.</param>
+            <param name="userErrorMessage">Safe error message to display to the user.</param>
+            <param name="httpStatus">error status to display to the user.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:Opeeka.PICS.Api.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            ConfigureContainer is where you can register things directly
+            with Autofac. This runs after ConfigureServices so the things
+            here will override registrations made in ConfigureServices.
+            Don't build the container; that gets done for you by the factory.
+            </summary>
+            <param name="builder">The autofac container.</param>
+        </member>
+    </members>
+</doc>

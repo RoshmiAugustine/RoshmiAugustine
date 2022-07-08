@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Redis.StackExchange.Encryption</name>
+    </assembly>
+    <members>
+        <member name="P:Redis.StackExchange.Encryption.IRedis.DatabaseNumber">
+            <summary>
+            Get the Redis database number currently used.
+            </summary>
+        </member>
+        <member name="P:Redis.StackExchange.Encryption.IRedis.IsConnected">
+            <summary>
+            Returns True if Redis server connected successfully else returns false.
+            </summary>
+        </member>
+        <member name="P:Redis.StackExchange.Encryption.IRedis.Encryption">
+            <summary>
+            Get or Set True/False to Enable/Disable encryption.
+            By default encryption is Enabled.
+            </summary>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Get``1(System.String)">
+            <summary>
+            Read cached value from Redis server.
+            </summary>
+            <typeparam name="T">Type of cached value</typeparam>
+            <param name="key">Key of cached value.</param>
+            <returns>Cached value of type T.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Get(System.String)">
+            <summary>
+            Read cached string value from Redis server.
+            </summary>
+            <param name="key">Key of cached value.</param>
+            <returns>Cached value as string.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.GetAll``1(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Read cached values from Redis server.
+            </summary>
+            <typeparam name="T">Type of cached values.</typeparam>
+            <param name="keys">string Collection of keys.</param>
+            <returns>Dictionary of key-(cached)value pair.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Post``1(System.String,``0)">
+            <summary>
+            Insert a value/object to Redis server.
+            </summary>
+            <typeparam name="T">Type of value/object to be cached.</typeparam>
+            <param name="key">Key of value/object to be cached.</param>
+            <param name="objectToCache">value/object to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Post``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            Insert a value/object to Redis server.
+            </summary>
+            <typeparam name="T">Type of value/object to be cached.</typeparam>
+            <param name="key">Key of value/object to be cached.</param>
+            <param name="objectToCache">Value/object to be cached.</param>
+            <param name="expiresAt">Timespan for expiry of the object to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Post(System.String,System.String)">
+            <summary>
+            Insert a string value to Redis server.
+            </summary>
+            <param name="key">Key of value/object to be cached.</param>
+            <param name="objectToCache">String value to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Post(System.String,System.String,System.TimeSpan)">
+            <summary>
+            Insert a string value to Redis server.
+            </summary>
+            <param name="key">Key of string value to be cached.</param>
+            <param name="objectToCache">String value to be cached.</param>
+            <param name="expiresAt">Timespan for expiry of the value to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.PostAll``1(System.Collections.Generic.IDictionary{System.String,``0})">
+            <summary>
+            Insert a dictionary collection of key-values/objects to Redis server.
+            </summary>
+            <typeparam name="T">Type of values/objects to be cached.</typeparam>
+            <param name="values">Dictionary collection of key-value/object to be cached</param>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.PostAll``1(System.Collections.Generic.IDictionary{System.String,``0},System.TimeSpan)">
+            <summary>
+            Insert a dictionary collection of key-value/object to Redis server.
+            </summary>
+            <typeparam name="T">Type of value/object to be cached.</typeparam>
+            <param name="values">Dictionary collection of key-value/object</param>
+            <param name="expiresAt">Timespan for expiry of the value/object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.Delete(System.String)">
+            <summary>
+            Remove a value/object from Redis server.
+            </summary>
+            <param name="key">Key of cached value/object.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.DeleteAll(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Remove All Specified key-value/object from Redis Server.
+            </summary>
+            <param name="keys">Keys of value/object to be removed.</param>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.FlushAll">
+            <summary>
+            FlushAll/Clear all key-values/objects from Redis Server.
+            Available only if allowAdmin=True;
+            </summary>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.IsKeyExists(System.String)">
+            <summary>
+            Check a Key exists or not.
+            </summary>
+            <param name="key">Key</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.IsKeyExistsAsync(System.String)">
+            <summary>
+            Check a Key exists or not.
+            </summary>
+            <param name="key">Key</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.GetAsync(System.String)">
+            <summary>
+            Read cached string value from Redis server.
+            </summary>
+            <param name="key">Key of cached value.</param>
+            <returns>Cached value as string.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.GetAsync``1(System.String)">
+            <summary>
+            Read cached value from Redis server.
+            </summary>
+            <typeparam name="T">Type of cached value</typeparam>
+            <param name="key">Key of cached value.</param>
+            <returns>Cached value of type T.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.PostAsync``1(System.String,``0)">
+            <summary>
+            Insert a value/object to Redis server.
+            </summary>
+            <typeparam name="T">Type of value/object to be cached.</typeparam>
+            <param name="key">Key of value/object to be cached.</param>
+            <param name="objectToCache">value/object to be cached.</param>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.PostAsync``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            Insert a string value to Redis server.
+            </summary>
+            <param name="key">Key of string value to be cached.</param>
+            <param name="objectToCache">String value to be cached.</param>
+            <param name="expiresAt">Timespan for expiry of the value to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.PostAsync(System.String,System.String)">
+            <summary>
+            Insert a string value to Redis server.
+            </summary>
+            <param name="key">Key of value/object to be cached.</param>
+            <param name="objectToCache">String value to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.PostAsync(System.String,System.String,System.TimeSpan)">
+            <summary>
+            Insert a string value to Redis server.
+            </summary>
+            <param name="key">Key of string value to be cached.</param>
+            <param name="objectToCache">String value to be cached.</param>
+            <param name="expiresAt">Timespan for expiry of the value to be cached.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.DeleteAsync(System.String)">
+            <summary>
+            Remove a value/object from Redis server.
+            </summary>
+            <param name="key">Key of cached value/object.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.IRedis.FlushAllAsync">
+            <summary>
+            FlushAll/Clear all key-values/objects from Redis Server.
+            Available only if allowAdmin=True;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.RedisClient.#ctor(System.String,System.Int32)">
+            <summary>
+            Initialize a Redis client object with connectionString.
+            If connectionString fails it may throw exception
+            </summary>
+            <param name="connectionString">"hostname:port,allowAdmin=True,connectTimeout=3000,ssl=False,abortConnect=False"</param>
+            <param name="DatabaseNumber"></param>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.RedisClient.#ctor(StackExchange.Redis.Extensions.Core.Configuration.RedisConfiguration,System.Int32)">
+            <summary>
+            Initialize a Redis client object with configurations.
+            If configurations fails it may throw exception
+            </summary>
+            <param name="configurations">StackExchange.Redis.Extensions.Core.Configuration.RedisConfiguration object</param>
+            <param name="DatabaseNumber"></param>
+        </member>
+        <member name="M:Redis.StackExchange.Encryption.RedisClient.#ctor(StackExchange.Redis.ConfigurationOptions,System.Int32)">
+            <summary>
+            Initialize a Redis client object with configurations.
+            If configurations fails it may throw exception
+            </summary>
+            <param name="configurations">StackExchange.Redis.ConfigurationOptions object</param>
+            <param name="DatabaseNumber"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+﻿[*.cs]
+
+# SA1612: Element parameter documentation should match element parameters
+dotnet_diagnostic.SA1612.severity = none
+
+# SA1604: Element documentation should have summary
+dotnet_diagnostic.SA1604.severity = none
+
+# CS1570: XML comment has badly formed XML
+dotnet_diagnostic.CS1570.severity = none
+
+# SA1611: Element parameters should be documented
+dotnet_diagnostic.SA1611.severity = none

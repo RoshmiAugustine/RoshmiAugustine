@@ -1,0 +1,35 @@
+steps:
+- task: SSH@0
+  displayName: 'Stop systemmd Service'
+  inputs:
+    sshEndpoint: 'Dev Server'
+    commands: 'sudo systemctl stop pcis-app.service'
+
+- task: CopyFilesOverSSH@0
+  displayName: 'Copy build files to VM'
+  inputs:
+    sshEndpoint: 'Dev Server'
+    sourceFolder: '$(System.DefaultWorkingDirectory)/Dev Artifact/drop'
+    targetFolder: /home/AzureUser/Artifacts
+
+- task: SSH@0
+  displayName: 'Unzip Archieve to project root'
+  inputs:
+    sshEndpoint: 'Dev Server'
+    commands: 'unzip -o /home/AzureUser/Artifacts/Api.zip -d /home/AzureUser/Code'
+
+
+variables:
+  DbConnectionString: ''
+
+script: |
+   dotnet restore "$(System.DefaultWorkingDirectory)\Dev Artifact\migration\s\DbMigration\DbMigration.csproj"
+   dotnet run -p "$(System.DefaultWorkingDirectory)\Dev Artifact\migration\s\DbMigration\DbMigration.csproj" "$(DbConnectionString)"
+  displayName: 'Running Database Migration'
+
+- task: SSH@0
+  displayName: 'Start systemmd Service'
+  inputs:
+    sshEndpoint: 'Dev Server'
+    commands: 'sudo systemctl start pcis-app.service'
+

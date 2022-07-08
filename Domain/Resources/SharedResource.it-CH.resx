@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Successfully added." xml:space="preserve">
+    <value>Aggiunto con successo.</value>
+  </data>
+  <data name="Insertion failed." xml:space="preserve">
+    <value>Inserimento non riuscito.</value>
+  </data>
+  <data name="Successfully updated." xml:space="preserve">
+    <value>Aggiornato con successo.</value>
+  </data>
+  <data name="Updation failed." xml:space="preserve">
+    <value>Aggiornamento non riuscito.</value>
+  </data>
+  <data name="Successfully deleted." xml:space="preserve">
+    <value>Eliminato con successo.</value>
+  </data>
+  <data name="Deletion failed." xml:space="preserve">
+    <value>Eliminazione non riuscita.</value>
+  </data>
+  <data name="Please enter a valid {0}." xml:space="preserve">
+    <value>Inserisci un {0} valido.</value>
+  </data>
+  <data name="Cannot delete. Record already in use." xml:space="preserve">
+    <value>Impossibile eliminare. Record già in uso.</value>
+  </data>
+  <data name="Success." xml:space="preserve">
+    <value>Successo.</value>
+  </data>
+  <data name="Invalid Username/Password/Tenant" xml:space="preserve">
+    <value>Nome utente / password / inquilino non validi</value>
+  </data>
+  <data name="Newly cloned questionnaire is at ID " xml:space="preserve">
+    <value>Il questionario appena clonato è a ID</value>
+  </data>
+  <data name="Invalid Password" xml:space="preserve">
+    <value>Password non valida</value>
+  </data>
+  <data name="Failure." xml:space="preserve">
+    <value>Fallimento.</value>
+  </data>
+  <data name="Table is already in use." xml:space="preserve">
+    <value>La tabella è già in uso.</value>
+  </data>
+  <data name="Permission denied for user." xml:space="preserve">
+    <value>Autorizzazione negata per l'utente.</value>
+  </data>
+  <data name="This Agency Abbreviation already exists. Please enter another Abbreviation." xml:space="preserve">
+    <value>Questa abbreviazione dell'agenzia esiste già. Inserisci un'altra abbreviazione.</value>
+  </data>
+  <data name="This Agency Name already exists.Please enter another Name." xml:space="preserve">
+    <value>Questo nome agenzia esiste già. Inserisci un altro nome.</value>
+  </data>
+  <data name="List Order is already in use." xml:space="preserve">
+    <value>L'ordine elenco è già in uso.</value>
+  </data>
+  <data name="Successfully saved." xml:space="preserve">
+    <value>Salvato con successo.</value>
+  </data>
+  <data name="Save failed." xml:space="preserve">
+    <value>Salvataggio fallito.</value>
+  </data>
+  <data name="Successfully submitted." xml:space="preserve">
+    <value>Inviato con successo.</value>
+  </data>
+  <data name="Submission failed." xml:space="preserve">
+    <value>Invio non riuscito.</value>
+  </data>
+  <data name="Successfully saved and notification deletion failed" xml:space="preserve">
+    <value>Salvataggio riuscito e eliminazione della notifica non riuscita</value>
+  </data>
+  <data name="The mail has been sent successfully." xml:space="preserve">
+    <value>La mail è stata inviata con successo.</value>
+  </data>
+  <data name="Failed to send mail." xml:space="preserve">
+    <value>Impossibile inviare la posta.</value>
+  </data>
+  <data name="Email Already Exists" xml:space="preserve">
+    <value>Email già esistente</value>
+  </data>
+  <data name="Successfully saved Notification" xml:space="preserve">
+    <value>Notifica salvata con successo</value>
+  </data>
+  <data name="Failed to save Notification." xml:space="preserve">
+    <value>Impossibile salvare la notifica.</value>
+  </data>
+  <data name="EmailID is missing" xml:space="preserve">
+    <value>EmailID mancante</value>
+  </data>
+  <data name="Invalid URL" xml:space="preserve">
+    <value>URL non valido</value>
+  </data>
+  <data name="Invalid voiceType({0})" xml:space="preserve">
+    <value>VoiceType non valido ({0})</value>
+  </data>
+  <data name="Invalid questionnaire." xml:space="preserve">
+    <value>Questionario non valido.</value>
+  </data>
+  <data name="URL expired" xml:space="preserve">
+    <value>URL scaduto</value>
+  </data>
+  <data name="Otp is expired" xml:space="preserve">
+    <value>Otp è scaduto</value>
+  </data>
+  <data name="Invalid Otp" xml:space="preserve">
+    <value>Otp non valido</value>
+  </data>
+  <data name="Email assessment already submitted" xml:space="preserve">
+    <value>Valutazione tramite posta elettronica già inviata</value>
+  </data>
+  <data name="Email assessment deleted" xml:space="preserve">
+    <value>Valutazione dell'email eliminata</value>
+  </data>
+  <data name="Image uploaded successfully." xml:space="preserve">
+    <value>Immagine caricata con successo.</value>
+  </data>
+  <data name="Image upload failed." xml:space="preserve">
+    <value>Caricamento dell'immagine non riuscito.</value>
+  </data>
+  <data name="Assessment deleted" xml:space="preserve">
+    <value>Valutazione eliminata</value>
+  </data>
+  <data name="Error logged successfully." xml:space="preserve">
+    <value>Errore registrato con successo.</value>
+  </data>
+  <data name="Invalid user input. HTML code detected." xml:space="preserve">
+    <value>Input dell'utente non valido. Codice HTML rilevato.</value>
+  </data>
+  <data name="Failed to resend invitation." xml:space="preserve">
+    <value>Impossibile inviare nuovamente l'invito.</value>
+  </data>
+  <data name="Successfully resend invitation." xml:space="preserve">
+    <value>Invia di nuovo l'invito con successo.</value>
+  </data>
+  <data name="Cannot Delete. The questionnaire already has an assessment." xml:space="preserve">
+    <value>Impossibile eliminare. Il questionario ha già una valutazione.</value>
+  </data>
+  <data name="OTP requests exceeded! Allows only a maximum of {0} OTPs per minute. Please retry after {1}sec." xml:space="preserve">
+    <value>Richieste OTP superate! Consente solo un massimo di {0} OTP al minuto. Riprova dopo {1} sec.</value>
+  </data>
+  <data name="Helper external id already exists.Please enter another external id." xml:space="preserve">
+    <value>L'ID esterno dell'assistente esiste già. Inserisci un altro ID esterno.</value>
+  </data>
+  <data name="Successfully Uploaded Assessments.{0}." xml:space="preserve">
+    <value>Valutazioni caricate con successo. {0}.</value>
+  </data>
+  <data name="Failed To Upload Assessments.{0}" xml:space="preserve">
+    <value>Impossibile caricare le valutazioni. {0}</value>
+  </data>
+  <data name="Imported file column headers do not match with default template." xml:space="preserve">
+    <value>Le intestazioni delle colonne del file importato non corrispondono al modello predefinito.</value>
+  </data>
+  <data name="Imported file has column headers duplicated." xml:space="preserve">
+    <value>Il file importato presenta intestazioni di colonna duplicate.</value>
+  </data>
+  <data name="File is empty." xml:space="preserve">
+    <value>Il file è vuoto.</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="User Id" xml:space="preserve">
+    <value>ID utente</value>
+  </data>
+  <data name="Questionnaire Id" xml:space="preserve">
+    <value>ID questionario</value>
+  </data>
+  <data name="Country State Id" xml:space="preserve">
+    <value>ID stato paese</value>
+  </data>
+  <data name="Page Number" xml:space="preserve">
+    <value>Numero di pagina</value>
+  </data>
+  <data name="Page Size" xml:space="preserve">
+    <value>Dimensioni della pagina</value>
+  </data>
+  <data name="Agency Index" xml:space="preserve">
+    <value>Indice dell'agenzia</value>
+  </data>
+  <data name="People Index" xml:space="preserve">
+    <value>Indice delle persone</value>
+  </data>
+  <data name="Helper Index" xml:space="preserve">
+    <value>Indice di supporto</value>
+  </data>
+  <data name="tenantId" xml:space="preserve">
+    <value>tenantId</value>
+  </data>
+  <data name="Questionnaire Index" xml:space="preserve">
+    <value>Indice del questionario</value>
+  </data>
+  <data name="ReportingUnit ID" xml:space="preserve">
+    <value>ReportingUnit ID</value>
+  </data>
+  <data name="Agency ID" xml:space="preserve">
+    <value>ID agenzia</value>
+  </data>
+  <data name="Voice Type ID" xml:space="preserve">
+    <value>ID tipo di voce</value>
+  </data>
+  <data name="Collaboration Index" xml:space="preserve">
+    <value>Indice di collaborazione</value>
+  </data>
+  <data name="Assessment ID" xml:space="preserve">
+    <value>ID valutazione</value>
+  </data>
+  <data name="Person Questionnaire ID" xml:space="preserve">
+    <value>ID questionario persona</value>
+  </data>
+  <data name="Person Collaboration ID" xml:space="preserve">
+    <value>ID di collaborazione della persona</value>
+  </data>
+  <data name="Voice Type FKID" xml:space="preserve">
+    <value>Tipo di voce FKID</value>
+  </data>
+  <data name="personIndex" xml:space="preserve">
+    <value>personIndex</value>
+  </data>
+  <data name="IsSharedPermission" xml:space="preserve">
+    <value>IsSharedPermission</value>
+  </data>
+  <data name="CollaborationSharingIndex" xml:space="preserve">
+    <value>CollaborationSharingIndex</value>
+  </data>
+  <data name="AgencySharingIndex" xml:space="preserve">
+    <value>AgencySharingIndex</value>
+  </data>
+  <data name="IsActivePerson" xml:space="preserve">
+    <value>IsActivePerson</value>
+  </data>
+  <data name="Person ID" xml:space="preserve">
+    <value>ID persona</value>
+  </data>  
+</root>

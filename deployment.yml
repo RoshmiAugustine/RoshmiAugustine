@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pcis-backend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: pcis-backend-pod
+  template:
+    metadata:
+      labels:
+        app: pcis-backend-pod
+    spec:
+      containers:
+      - name: pcis-backend-pod
+        image: pcisdevdemoregistry.azurecr.io/pcis-webapidev:latest
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
